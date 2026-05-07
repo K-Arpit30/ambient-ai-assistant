@@ -1,0 +1,39 @@
+{
+  "manifest_version": 3,
+  "name": "OpenClaw Agent",
+  "version": "1.0.0",
+  "description": "Autonomous Ambient AI Agent - Transcribes meetings in real-time",
+  "action": {
+    "default_popup": "index.html",
+    "default_title": "OpenClaw Agent"
+  },
+  "background": {
+    "service_worker": "assets/background.js",
+    "type": "module"
+  },
+  "content_scripts": [
+    {
+      "matches": ["<all_urls>"],
+      "js": ["assets/contentScript.js"]
+    }
+  ],
+  "permissions": [
+    "storage",
+    "activeTab",
+    "scripting",
+    "notifications",
+    "sidePanel",
+    "offscreen",
+    "microphone"
+  ],
+  "host_permissions": [
+    "http://localhost:*/*",
+    "https://*/*"
+  ],
+  "web_accessible_resources": [
+    {
+      "resources": ["offscreen.html", "assets/offscreen.js"],
+      "matches": ["<all_urls>"]
+    }
+  ]
+}

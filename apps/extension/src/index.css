@@ -1,0 +1,59 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700;800&family=Space+Mono:ital,wght@0,400;0,700;1,400&display=swap');
+
+:root {
+  /* Colors */
+  --color-base: #F5F2EB;
+  --color-surface: #FFFFFF;
+  --color-text-primary: #0A0A0A;
+  --color-text-secondary: #4A4A4A;
+  --color-accent: #E63946;
+
+  /* Borders & Shadows */
+  --border-thick: 4px solid var(--color-text-primary);
+  --border-thin: 2px solid var(--color-text-primary);
+  --shadow-brutal: 4px 4px 0px var(--color-text-primary);
+  --shadow-brutal-hover: 6px 6px 0px var(--color-text-primary);
+
+  /* Typography */
+  --font-primary: 'Inter', system-ui, sans-serif;
+  --font-mono: 'Space Mono', monospace;
+}
+
+body {
+  margin: 0;
+  padding: 0;
+  background-color: var(--color-base);
+  color: var(--color-text-primary);
+  font-family: var(--font-primary);
+}
+
+/* Brutalist Button Utility Class */
+.btn-brutal {
+  font-family: var(--font-mono);
+  text-transform: uppercase;
+  font-weight: 700;
+  background: var(--color-accent);
+  color: var(--color-surface);
+  border: var(--border-thin);
+  border-radius: 0px;
+  box-shadow: var(--shadow-brutal);
+  cursor: pointer;
+  transition: all 0.15s linear;
+}
+
+.btn-brutal:hover:not(:disabled) {
+  box-shadow: var(--shadow-brutal-hover);
+  transform: translate(-2px, -2px);
+}
+
+.btn-brutal:active:not(:disabled) {
+  box-shadow: 0px 0px 0px var(--color-text-primary);
+  transform: translate(4px, 4px);
+}
+
+.btn-brutal:disabled {
+  background: #C4C4C4;
+  cursor: not-allowed;
+  box-shadow: 2px 2px 0px var(--color-text-primary);
+  transform: translate(2px, 2px);
+}

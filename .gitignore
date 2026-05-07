@@ -1,0 +1,47 @@
+# Dependencies
+node_modules/
+
+# Build outputs
+dist/
+build/
+.next/
+out/
+
+# Environment files
+.env
+.env.local
+.env.*.local
+
+# IDE
+.vscode/
+.idea/
+*.swp
+*.swo
+
+# OS
+.DS_Store
+Thumbs.db
+
+# Logs
+*.log
+npm-debug.log*
+pnpm-debug.log*
+
+# Lock files (keep pnpm-lock.yaml)
+package-lock.json
+yarn.lock
+
+# Turbo
+.turbo/
+
+# Supabase
+supabase/.branches
+supabase/.temp
+
+# Python
+venv/
+__pycache__/
+*.pyc
+
+# Gemini
+.gemini/

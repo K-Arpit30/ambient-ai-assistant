@@ -1,0 +1,17 @@
+{
+  "name": "@openclaw/database",
+  "version": "1.0.0",
+  "private": true,
+  "main": "dist/index.js",
+  "scripts": {
+    "build": "tsc",
+    "dev": "tsc -w"
+  },
+  "dependencies": {
+    "@supabase/supabase-js": "^2.39.8"
+  },
+  "devDependencies": {
+    "typescript": "^5.4.2",
+    "@types/node": "^20.11.24"
+  }
+}
